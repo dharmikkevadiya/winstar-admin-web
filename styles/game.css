@@ -1,0 +1,53 @@
+/* File: GameList.css */
+.GameListPaper {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.GameListImage {
+  position: relative;
+  max-width: 216px;
+  max-height: 309px;
+  object-fit: contain;
+  border-radius: 23px;
+}
+
+.GameListOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content at the bottom */
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.GameListOverlay:hover {
+  opacity: 1;
+}
+
+.GameListIcons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px; /* Add margin to separate from content */
+}
+
+.GameListContent {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.GameListIconContainer {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%); /* Center horizontally */
+  left: 50%;
+}
