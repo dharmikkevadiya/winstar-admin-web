@@ -80,7 +80,8 @@ const VerticalNavHeader = props => {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: ' center',
+              justifyContent: 'start',
+              gap: '10px',
               width: '180px',
               margin: '10px',
               ...menuCollapsedStyles,
@@ -88,6 +89,7 @@ const VerticalNavHeader = props => {
             }}
           >
             <img height='50' alt='error-illustration' src='/images/logo.png' />
+            <p>Winstar</p>
           </HeaderTitle>
         </LinkStyled>
       )}

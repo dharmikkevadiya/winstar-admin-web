@@ -67,8 +67,8 @@ const schema = yup.object().shape({
 })
 
 const defaultValues = {
-  email: '',
-  password: ''
+  email: 'test@yopmail.com',
+  password: '12345678'
 }
 
 const LoginPage = () => {
@@ -112,7 +112,7 @@ const LoginPage = () => {
       className='content-right'
       sx={{ backgroundColor: 'background.paper', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
     >
-      {/* {!hidden ? (
+      {!hidden ? (
         <Box
           sx={{
             flex: 1,
@@ -128,7 +128,7 @@ const LoginPage = () => {
           <LoginIllustration alt='login-illustration' src={`/images/pages/${imageSource}-${theme.palette.mode}.png`} />
           <FooterIllustrationsV2 />
         </Box>
-      ) : null} */}
+      ) : null}
       <RightWrapper>
         <Box
           sx={{
@@ -141,7 +141,7 @@ const LoginPage = () => {
         >
           <Box sx={{ width: '100%', maxWidth: 400 }}>
             <Box sx={{ my: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img height='70' alt='error-illustration' src='/images/logo.png' />
+              <img height='100' alt='error-illustration' src='/images/logo.png' />
             </Box>
             <Box sx={{ my: 6 }}>
               <Typography variant='h3' sx={{ mb: 1.5 }}>
@@ -151,6 +151,11 @@ const LoginPage = () => {
                 Please sign-in to your account and start the adventure
               </Typography>
             </Box>
+            <Alert icon={false} sx={{ py: 3, mb: 6, ...bgColors.primaryLight, '& .MuiAlert-message': { p: 0 } }}>
+              <Typography variant='body2' sx={{ mb: 2, color: 'primary.main' }}>
+                Admin: <strong>test@yopmail.com</strong> / Pass: <strong>12345678</strong>
+              </Typography>
+            </Alert>
             <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
               <Box sx={{ mb: 4 }}>
                 <Controller
