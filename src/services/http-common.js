@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-export const BASEURL = process.env.NEXT_PUBLIC_API_ENDPOINT
+// export const BASEURL = process.env.NEXT_PUBLIC_API_ENDPOINT
+export const BASEURL = 'https://winstar-admin-backend.onrender.com'
 
 import { Cookies } from 'react-cookie'
 
